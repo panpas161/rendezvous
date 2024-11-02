@@ -13,14 +13,13 @@
   /* The LDAP base DN */
   $ldap_bdn    = "dc=uoc,dc=gr";
 
-  /* The admins_file specified below contains the logins of the instructors
-   * and the teaching assistants. (syntax: one login per line)
-   * You can either create a new file (e.g. admins.txt) containing the desired
-   * logins or you can have this file point to the course's .rhosts file.
-   * (e.g. $admins_file = "home/lessons/hy120/.rhosts";)
-   */
-  //$admins_file = "../../.rhosts";
-  $admins_file = "./admins";
+  /* The admins array specified below contains the logins of the instructors
+   * and the teaching assistants. They will be able to add new exams, slots,
+   * as well as view and delete any and all data. */
+  $admins = array(
+    "admin1@dep.uni.edu",
+    "admin2@dep.uni.edu",
+  );
 
   /* This string will appear on the top of the webpage right next to the main
    * title "Rendezvous".
@@ -31,16 +30,16 @@
 
   /* These strings appear at the top right of the page next to the logo */
   $affil1      = "Computer Science Department";
-  $affil1_link = "http://www.csd.uoc.gr"; // enter URL or leave blank for no link
+  $affil1_link = "https://www.csd.uoc.gr"; // enter URL or leave blank for no link
   $affil2      = "University of Crete";
   $affil2_link = "http://www.uoc.gr";     // enter URL or leave blank for no link
   $affil3      = "Edit conf.php to change affiliation and logo";
   $affil3_link = "";                      // enter URL or leave blank for no link
-  $logo_path   = "theme/csd_logo.jpg";    // specify path to logo
-  $logo_link   = "http://www.uoc.gr";     // enter URL or leave blank for no link
+  $logo_path   = "https://www.csd.uoc.gr/images/UoC_logo.png";    // specify path to logo
+  $logo_link   = "https://www.uoc.gr";     // enter URL or leave blank for no link
 
   /* Change favicon */
-  $favicon_path = "theme/logo.ico";         // specify path to favicon
+  $favicon_path = "https://www.csd.uoc.gr/favicon.ico";  // specify path to favicon
 
   /* Set this to true to automatically send e-mail confirmations for
    * file rendezvous bookings */
